@@ -21,7 +21,7 @@ bot.on('message', message => {
         .addField("Utilisateurs sur le Discord", message.guild.memberCount)
         .setColor("0x81DAF5")
     message.channel.sendEmbed(embed)
-
+    message.delete();
     }
 })
 
@@ -36,7 +36,7 @@ bot.on('message', message => {
         .addField("&invite", "Pour m'inviter sur ton Discord")
         .setColor("0x81DAF5")
     message.channel.sendEmbed(embed)
-
+    message.delete();
     }
 })
 
