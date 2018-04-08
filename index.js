@@ -12,11 +12,24 @@ bot.login("NDMyMjA1ODMzNzIwNDMwNjEy.DaqD3A.T9soBVTbtefWwZOFR3U6zb6bUi0");
 
 
 bot.on('message', message => {
+
     if (message.content === prefix + "help"){
         message.channel.sendMessage("```⇩Liste des commandes⇩: \n &help \n &site \n &invite```");
         message.delete();
     }
 
+    if (message.content === prefix + "infodiscord")
+        var embed = new Discord.RichEmbed()
+        .setDescription("Information de Discord")
+        .addField("Nom du Discord", message.guild.name)
+        .addField("Crée le", message.guild.createdAt)
+        .addField("Tu as rejoin le", message.member.joinedAt)
+        .addField("Utilisateurs sur le Discord", message.guild.memberCount)
+        .setColor("0x0000FF")
+    message.channel.sendEmbed(embed)
+
+    }
+    
     if (message.content === prefix + "site"){
         message.channel.sendMessage("```NeYziX's Shop : http://neyzix.000webhostapp.com```");
         message.delete(); 
