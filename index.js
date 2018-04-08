@@ -23,7 +23,31 @@ bot.on('message', message => {
     message.channel.sendEmbed(embed)
     message.delete();
     }
-})
+});
+
+bot.on('message', message => {
+
+    if (message.content === prefix + "invite") {
+        var embed = new Discord.RichEmbed()
+        .setDescription("Pour m'inviter sur ton Discord :")
+        .addField("Lien :", "https://discordapp.com/oauth2/authorize?client_id=432205833720430612&permissions=8&scope=bot")
+        .setColor("0x81DAF5")
+    message.channel.sendEmbed(embed)
+    message.delete();
+    }
+});
+
+bot.on('message', message => {
+
+    if (message.content === prefix + "shop") {
+        var embed = new Discord.RichEmbed()
+        .setDescription("Pour visiter le NeYziX-s Shop :")
+        .addField("Lien :", "http://neyzix.000webhostapp.com")
+        .setColor("0x81DAF5")
+    message.channel.sendEmbed(embed)
+    message.delete();
+    }
+});
 
 bot.on('message', message => {
 
@@ -38,20 +62,8 @@ bot.on('message', message => {
     message.channel.sendEmbed(embed)
     message.delete();
     }
-})
-
-bot.on('message', message => {
-    
-    if (message.content === prefix + "shop"){
-        message.channel.sendMessage("```NeYziX's Shop : http://neyzix.000webhostapp.com```");
-        message.delete(); 
-    }
-
-    if (message.content === prefix + "invite"){
-        message.channel.sendMessage("```⇩Pour mettre me mettre sur ton serveur Discord⇩:\n https://discordapp.com/oauth2/authorize?client_id=432205833720430612&permissions=8&scope=bot```");
-        message.delete();
-    }
 });
+
 
 bot.on("guildMemberAdd", member => {
     member.guild.channels.find("name", "general").send(`Bienvenue ${member} sur la **NeYziX Commnunity**`)
