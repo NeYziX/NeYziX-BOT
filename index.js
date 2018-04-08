@@ -23,16 +23,23 @@ bot.on('message', message => {
     message.channel.sendEmbed(embed)
 
     }
-})
+}
 
 bot.on('message', message => {
 
-    if (message.content === prefix + "help"){
-        message.channel.sendMessage("```⇩Liste des commandes⇩: \n &help \n &site \n &invite```");
-        message.delete();
+    if (message.content === prefix + "help") {
+        var embed = new Discord.RichEmbed()
+        .setDescription("⇩Liste des commandes⇩:")
+        .addField("&help", Liste des commandes)
+        .addField("&infodiscord", Info sur le Discord)
+        .addField("&site", Shop de NeYziX)
+        .addField("Utilisateurs sur le Discord", message.guild.memberCount)
+        .setColor("0x0000FF")
+    message.channel.sendEmbed(embed)
+
     }
     
-    if (message.content === prefix + "site"){
+    if (message.content === prefix + "shop"){
         message.channel.sendMessage("```NeYziX's Shop : http://neyzix.000webhostapp.com```");
         message.delete(); 
     }
