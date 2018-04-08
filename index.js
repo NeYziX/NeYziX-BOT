@@ -43,11 +43,11 @@ bot.on('message', message => {
 
 bot.on("guildMemberAdd", member => {
     member.guild.channels.find("name", "general").send(`Bienvenue ${member} sur la **NeYziX Commnunity**`)
-})
+});
 
 bot.on("guildMemberRemove", member => {
     member.guild.channels.find("name", "general").send(`Aurevoir ${member}`)
-})
+});
 
 bot.on("guildMemberAdd", member => {
     var role = member.guild.roles.find('name', 'Membres');
