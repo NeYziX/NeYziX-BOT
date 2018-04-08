@@ -23,16 +23,16 @@ bot.on('message', message => {
     message.channel.sendEmbed(embed)
 
     }
-}
+})
 
 bot.on('message', message => {
 
     if (message.content === prefix + "help"){
-        message.channel.sendMessage("```⇩Liste des commandes⇩: \n &help \n &infodiscord \n &shop \n &invite```");
+        message.channel.sendMessage("```⇩Liste des commandes⇩: \n &help \n &site \n &invite```");
         message.delete();
     }
     
-    if (message.content === prefix + "shop"){
+    if (message.content === prefix + "site"){
         message.channel.sendMessage("```NeYziX's Shop : http://neyzix.000webhostapp.com```");
         message.delete(); 
     }
