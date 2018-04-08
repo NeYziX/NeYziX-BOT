@@ -29,7 +29,7 @@ bot.on('message', message => {
 
     if (message.content === prefix + "test") {
         var embed = new Discord.RichEmbed()
-        .setDescription("Liste des commandes")
+        .setDescription("Liste des commandes", Ez)
         .addField("&help | Pour afficher la liste des commandes")
         .addField("&infodiscord | Pour afficher les informations du Discord")
         .addField("&site | Pour afficher le shop de NeYziX")
