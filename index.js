@@ -66,11 +66,11 @@ bot.on('message', message => {
 
 
 bot.on("guildMemberAdd", member => {
-    member.guild.channels.find("name", "general").send(`Bienvenue ${member} sur la **NeYziX Commnunity**`)
+    member.guild.channels.find("name", "arrivé-départ").send(`Bienvenue à ${member} sur la **NeYziX Commnunity**.`)
 });
 
 bot.on("guildMemberRemove", member => {
-    member.guild.channels.find("name", "general").send(`Aurevoir ${member}`)
+    member.guild.channels.find("name", "arrivé-départ").send(`Aurevoir ${member}.`)
 });
 
 bot.on("guildMemberAdd", member => {
