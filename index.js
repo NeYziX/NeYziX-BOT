@@ -5,7 +5,6 @@ var prefix = ("&");
 
 bot.on("ready", function() {
     bot.user.setGame("Aide | &help");
-    bot.user.setAvatar(https://i.pinimg.com/originals/a8/39/35/a83935a027475e34ebace7d4a1ed33e8.jpg)
     console.log("Connecté avec succès")
 });
 
