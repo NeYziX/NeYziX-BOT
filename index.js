@@ -30,11 +30,11 @@ bot.on('message', message => {
     if (message.content === prefix + "help") {
         var embed = new Discord.RichEmbed()
         .setDescription("⇩Liste des commandes⇩:")
-        .addField("&help | Pour afficher la liste des commandes")
-        .addField("&infodiscord | Pour afficher les informations du Discord")
-        .addField("&shop | Pour afficher le shop de NeYziX")
-        .addField("&invite | Pour m'inviter sur ton Discord")
-        .setColor("0x0000FF")
+        .addField("&help", "Pour afficher la liste les commandes")
+        .addField("&infodiscord", "Pour afficher les informations du Discord")
+        .addField("&shop", "Pour afficher le shop de NeYziX")
+        .addField("&invite", "Pour m'inviter sur ton Discord")
+        .setColor("0x81DAF5")
     message.channel.sendEmbed(embed)
 
     }
