@@ -27,12 +27,12 @@ bot.on('message', message => {
 
 bot.on('message', message => {
 
-    if (message.content === prefix + "test") {
+    if (message.content === prefix + "help") {
         var embed = new Discord.RichEmbed()
-        .setDescription("Liste des commandes")
+        .setDescription("⇩Liste des commandes⇩:")
         .addField("&help | Pour afficher la liste des commandes")
         .addField("&infodiscord | Pour afficher les informations du Discord")
-        .addField("&site | Pour afficher le shop de NeYziX")
+        .addField("&shop | Pour afficher le shop de NeYziX")
         .addField("&invite | Pour m'inviter sur ton Discord")
         .setColor("0x0000FF")
     message.channel.sendEmbed(embed)
@@ -41,13 +41,8 @@ bot.on('message', message => {
 })
 
 bot.on('message', message => {
-
-    if (message.content === prefix + "help"){
-        message.channel.sendMessage("```⇩Liste des commandes⇩: \n &help \n &site \n &invite```");
-        message.delete();
-    }
     
-    if (message.content === prefix + "site"){
+    if (message.content === prefix + "shop"){
         message.channel.sendMessage("```NeYziX's Shop : http://neyzix.000webhostapp.com```");
         message.delete(); 
     }
