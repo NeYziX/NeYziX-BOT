@@ -18,7 +18,7 @@ bot.on('message', message => {
         message.delete();
     }
 
-    if (message.content === prefix + "infodiscord")
+    if (message.content === prefix + "infodiscord") {
         var embed = new Discord.RichEmbed()
         .setDescription("Information de Discord")
         .addField("Nom du Discord", message.guild.name)
