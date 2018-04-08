@@ -66,7 +66,7 @@ bot.on('message', message => {
 
 
 bot.on("guildMemberAdd", member => {
-    member.guild.channels.find("name", "arrivé-départ").send(`Bienvenue à ${member} sur la **NeYziX Commnunity**.`)
+    member.guild.channels.find("name", "arrivé-départ").send(`Bienvenue à ${member} sur la **${message.guild.name}**.`)
 });
 
 bot.on("guildMemberRemove", member => {
@@ -74,6 +74,6 @@ bot.on("guildMemberRemove", member => {
 });
 
 bot.on("guildMemberAdd", member => {
-    var role = member.guild.roles.find('name', 'Membres');
+    var role = member.guild.roles.find('name', 'Membres 🌟');
     member.addRole(role)
 })
