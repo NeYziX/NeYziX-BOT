@@ -22,8 +22,8 @@ bot.on('message', message => {
         message.delete(); 
     }
 
-    if (message.content === prefix + "achat"){
-        message.channel.sendMessage("`{user.username}``");
+    if (message.content === prefix + "invite"){
+        message.channel.sendMessage("```⇩Pour mettre me mettre sur ton serveur Discord⇩:\n https://discordapp.com/oauth2/authorize?client_id=432205833720430612&permissions=8&scope=bot```");
         message.delete();
     }
 });
