@@ -30,7 +30,7 @@ bot.on('message', message => {
     if (message.content === prefix + "invite") {
         var embed = new Discord.RichEmbed()
         .setDescription("Pour m'inviter sur ton Discord :")
-        .addField("Lien :", "https://discordapp.com/oauth2/authorize?client_id=432205833720430612&permissions=8&scope=bot")
+        .addField("Lien :", "https://discordapp.com/oauth2/authorize?client_id=432978371077472257&permissions=8&scope=bot")
         .setColor("0x81DAF5")
     message.channel.sendEmbed(embed)
     message.delete();
