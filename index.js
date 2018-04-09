@@ -4,7 +4,7 @@ const bot = new Discord.Client();
 var prefix = ("&");
 
 bot.on("ready", function() {
-    bot.user.setGame("Aide | &help");
+    bot.user.setGame("Aide | &help | by NeYziX");
     console.log("Connecté avec succès")
 });
 
