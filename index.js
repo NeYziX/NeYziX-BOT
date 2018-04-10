@@ -47,12 +47,6 @@ message.channel.sendEmbed(embed)
 message.delete();
 }
 
-
-
-
-
-
-
 bot.on("guildMemberAdd", member => {
   member.guild.channels.find("name", "arrivé-départ").send("Bienvenue à ${member} sur le serveur ;")
 });
