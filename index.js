@@ -1,17 +1,7 @@
 const discord = require('discord.js');
-const handles = require('discord-handles');
- 
 const client = new discord.Client();
 
 var prefix = ("&");
-
-function random(min, max){
-  min = Math.ceil(0);
-  max = Math.floor(2);
-  randnum = Math.floor(Math.random() * (max - min +1)+ min);
-}
-
-
 
 client.on("ready", () => {
 
