@@ -1,11 +1,22 @@
-const Discord = require("discord.js");
-const bot = new Discord.Client();
+const discord = require('discord.js');
+const handles = require('discord-handles');
+ 
+const client = new discord.Client();
 
 var prefix = ("&");
 
-bot.on("ready", function() {
-  bot.user.setGame(`dans ${client.guilds.size} serveurs`)
-  console.log("le bot a démarré avec,  ${client.users.size} personnes, dans ${client.guilds.size} serveurs"); 
+function random(min, max){
+  min = Math.ceil(0);
+  max = Math.floor(2);
+  randnum = Math.floor(Math.random() * (max - min +1)+ min);
+}
+
+
+
+client.on("ready", () => {
+
+  console.log(le bot a démarré avec,  ${client.users.size} personnes, dans ${client.guilds.size} serveurs); 
+  client.user.setActivity(dans ${client.guilds.size} serveurs)
 });
 
 bot.login("NDMyOTc4MzcxMDc3NDcyMjU3.Da1KDg.GuaCfKr5JhXz2RjL4z4QPVRcTpU");
