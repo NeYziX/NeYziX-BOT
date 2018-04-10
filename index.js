@@ -5,8 +5,8 @@ var prefix = ("&");
 
 bot.on("ready", function() {
 
-  console.log(`le bot a démarré avec,  ${client.users.size} personnes, dans ${client.guilds.size} serveurs`); 
-  bot.user.setGame(`&help | ${client.guilds.size} serveurs`)
+  console.log("le bot a démarré"); 
+  bot.user.setGame("&help | By NeYziX")
 });
 
 bot.login("NDMyOTc4MzcxMDc3NDcyMjU3.Da1KDg.GuaCfKr5JhXz2RjL4z4QPVRcTpU");
