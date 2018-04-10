@@ -19,9 +19,9 @@ client.on("ready", () => {
   client.user.setActivity(`dans ${client.guilds.size} serveurs`)
 });
 
-bot.login("NDMyOTc4MzcxMDc3NDcyMjU3.Da1KDg.GuaCfKr5JhXz2RjL4z4QPVRcTpU");
+client.login("NDMyOTc4MzcxMDc3NDcyMjU3.Da1KDg.GuaCfKr5JhXz2RjL4z4QPVRcTpU");
 
-bot.on('message', message => {
+client.on('message', message => {
 
     if (message.content === prefix + "infodiscord") {
         var embed = new Discord.RichEmbed()
@@ -36,7 +36,7 @@ bot.on('message', message => {
     }
 });
 
-bot.on('message', message => {
+client.on('message', message => {
 
     if (message.content === prefix + "invite") {
         var embed = new Discord.RichEmbed()
@@ -48,7 +48,7 @@ bot.on('message', message => {
     }
 });
 
-bot.on('message', message => {
+client.on('message', message => {
 
     if (message.content === prefix + "shop") {
         var embed = new Discord.RichEmbed()
@@ -60,7 +60,7 @@ bot.on('message', message => {
     }
 });
 
-bot.on('message', message => {
+client.on('message', message => {
 
     if (message.content === prefix + "help") {
         var embed = new Discord.RichEmbed()
@@ -76,15 +76,15 @@ bot.on('message', message => {
 });
 
 
-bot.on("guildMemberAdd", member => {
+client.on("guildMemberAdd", member => {
     member.guild.channels.find("name", "arrivé-départ").send(`Bienvenue à ${member} sur le serveur ;)`)
 });
 
-bot.on("guildMemberRemove", member => {
+client.on("guildMemberRemove", member => {
     member.guild.channels.find("name", "arrivé-départ").send(`Aurevoir ${member}.`)
 });
 
-bot.on("guildMemberAdd", member => {
+client.on("guildMemberAdd", member => {
     var role = member.guild.roles.find('name', 'Membres 🌟');
     member.addRole(role)
 })
