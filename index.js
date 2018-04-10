@@ -1,17 +1,17 @@
 const discord = require('discord.js');
-const client = new discord.Client();
+const bot = new discord.Client();
 
 var prefix = ("&");
 
-client.on("ready", () => {
+bot.on("ready", () => {
 
   console.log(`le bot a démarré avec,  ${client.users.size} personnes, dans ${client.guilds.size} serveurs`); 
-  client.user.setActivity(`&help | ${client.guilds.size} serveurs`)
+  bot.user.setActivity(`&help | ${client.guilds.size} serveurs`)
 });
 
-client.login("NDMyOTc4MzcxMDc3NDcyMjU3.Da1KDg.GuaCfKr5JhXz2RjL4z4QPVRcTpU");
+bot.login("NDMyOTc4MzcxMDc3NDcyMjU3.Da1KDg.GuaCfKr5JhXz2RjL4z4QPVRcTpU");
 
-client.on('message', message => {
+bot.on('message', message => {
 
     if (message.content === prefix + "infodiscord") {
         var embed = new Discord.RichEmbed()
@@ -26,7 +26,7 @@ client.on('message', message => {
     }
 });
 
-client.on('message', message => {
+bot.on('message', message => {
 
     if (message.content === prefix + "invite") {
         var embed = new Discord.RichEmbed()
@@ -38,7 +38,7 @@ client.on('message', message => {
     }
 });
 
-client.on('message', message => {
+bot.on('message', message => {
 
     if (message.content === prefix + "shop") {
         var embed = new Discord.RichEmbed()
@@ -50,7 +50,7 @@ client.on('message', message => {
     }
 });
 
-client.on('message', message => {
+bot.on('message', message => {
 
     if (message.content === prefix + "help") {
         var embed = new Discord.RichEmbed()
@@ -66,15 +66,15 @@ client.on('message', message => {
 });
 
 
-client.on("guildMemberAdd", member => {
+bot.on("guildMemberAdd", member => {
     member.guild.channels.find("name", "arrivé-départ").send(`Bienvenue à ${member} sur le serveur ;)`)
 });
 
-client.on("guildMemberRemove", member => {
+bot.on("guildMemberRemove", member => {
     member.guild.channels.find("name", "arrivé-départ").send(`Aurevoir ${member}.`)
 });
 
-client.on("guildMemberAdd", member => {
+bot.on("guildMemberAdd", member => {
     var role = member.guild.roles.find('name', 'Membres 🌟');
     member.addRole(role)
 })
