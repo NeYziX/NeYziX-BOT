@@ -9,7 +9,7 @@ bot.on("ready", function() {
   console.log("le bot a démarré"); 
 });
 
-bot.login("NDMyOTc4MzcxMDc3NDcyMjU3.Da6kug.MK9pejpbSpYWa_xjMH3z2XFsG7E");
+bot.login("NDMzMzUwOTAzMzQ1NTc3OTk0.Da6lHw.qUyAtprGVzju5SUOgpxyQgNvvf4");
 
 bot.on('message', message => {
 if (message.content === prefix + "invite") {
