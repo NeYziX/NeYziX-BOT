@@ -3,7 +3,7 @@ const bot = new Discord.Client();
 
 var prefix = ("&");
 
-client.on("ready", () => {
+bot.on("ready", () => {
   
   console.log(`le bot a démarré avec,  ${client.users.size} personnes'); 
   client.user.setGame(`dans ${client.guilds.size} serveurs`);
