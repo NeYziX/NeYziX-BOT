@@ -4,9 +4,9 @@ const bot = new discord.Client();
 var prefix = ("&");
 
 bot.on("ready", function() {
-
-  console.log("le bot a démarré"); 
+  
   bot.user.setGame("&help | By NeYziX")
+  console.log("le bot a démarré"); 
 });
 
 bot.login("NDMyOTc4MzcxMDc3NDcyMjU3.Da1KDg.GuaCfKr5JhXz2RjL4z4QPVRcTpU");
