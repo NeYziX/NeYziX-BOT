@@ -3,9 +3,10 @@ const bot = new Discord.Client();
 
 var prefix = ("&");
 
-bot.on("ready", function() {
-    bot.user.setGame("[&help] | by NeYziX");
-    console.log("Connecté avec succès")
+client.on("ready", () => {
+  
+  console.log(`le bot a démarré avec,  ${client.users.size} personnes'); 
+  client.user.setActivity(`dans ${client.guilds.size} serveurs`);
 });
 
 bot.login("NDMyOTc4MzcxMDc3NDcyMjU3.Da1KDg.GuaCfKr5JhXz2RjL4z4QPVRcTpU");
